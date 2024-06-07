@@ -8,6 +8,17 @@ class StateManageSecond extends StatefulWidget {
 }
 
 class _StateManageSecondState extends State<StateManageSecond> {
+  bool isFavorite = false;
+
+//write in method
+  colorChange() {
+    if (isFavorite == true) {
+      return Colors.red;
+    } else {
+      return Colors.grey;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,9 +42,19 @@ class _StateManageSecondState extends State<StateManageSecond> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(right: 12.0, top: 5.0),
-                        child: Icon(
-                          Icons.favorite,
-                          color: Colors.grey,
+                        child: InkWell(
+                          onTap: () {
+                            setState(() {
+                              isFavorite = !isFavorite;
+                              print("VALUE:::::::::::::$isFavorite");
+                            });
+                          },
+                          //ternory operators
+                          child: Icon(
+                            Icons.favorite,
+                            color:
+                                isFavorite == true ? Colors.red : Colors.grey,
+                          ),
                         ),
                       ),
                     ],
@@ -47,6 +68,12 @@ class _StateManageSecondState extends State<StateManageSecond> {
     );
   }
 }
+
+//calling method
+// child: Icon(
+//                             Icons.favorite,
+//                             color: colorChange()
+//                           ),
 
 // Image.network(
                   //   "https://unsplash.com/photos/a-body-of-water-surrounded-by-rocks-and-mountains-VVkKlU1UXbQ",
