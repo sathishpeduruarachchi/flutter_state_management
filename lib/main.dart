@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'state_manage_first.dart';
+import 'package:state_flutter/state_manage_second.dart';
+//import 'state_manage_first.dart';
 
 void main() {
   runApp(const MyFirstApp());
@@ -11,7 +12,7 @@ class MyFirstApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: StateManageFirst(),
+      home: StateManageSecond(),
     );
   }
 }
