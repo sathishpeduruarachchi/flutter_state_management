@@ -32,7 +32,7 @@ class _StateManageSecondState extends State<StateManageSecond> {
               child: Column(
                 children: [
                   Image.asset(
-                    "assets/image/img1.jpg",
+                    "assets/images/img1.jpg",
                     height: 190,
                     width: 250,
                     fit: BoxFit.fill,
