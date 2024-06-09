@@ -32,7 +32,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                   ModalRoute.withName("/"),
                 );
               },
-              child: const Text("Back to 1st"),
+              child: const Text("Back to Home"),
             ),
             //TextField()
           ],
