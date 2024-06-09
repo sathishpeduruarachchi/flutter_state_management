@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:state_flutter/third_screen.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen({super.key});
@@ -17,13 +18,25 @@ class _SecondScreenState extends State<SecondScreen> {
           children: [
             const Text("Second Screen"),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ThirdScreen(),
+                  ),
+                );
+              },
               child: const Text("Next Page"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text("Go to Back"),
             )
           ],
         ),
       ),
     );
-    ;
   }
 }
