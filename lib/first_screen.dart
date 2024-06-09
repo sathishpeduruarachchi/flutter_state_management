@@ -33,7 +33,9 @@ class _FirstScreenState extends State<FirstScreen> {
               },
               child: const Text("Next Page"),
             ),
-           
+            TextField(
+              controller: firstTextFeildCotroller,
+            )
           ],
         ),
       ),
