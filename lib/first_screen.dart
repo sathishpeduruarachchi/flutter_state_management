@@ -9,6 +9,8 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
+  final firstTextFeildCotroller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,11 +24,17 @@ class _FirstScreenState extends State<FirstScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const SecondScreen(),
+                    builder: (context) => SecondScreen(
+                      data: firstTextFeildCotroller.text,
+                    ),
                   ),
                 );
+                print(firstTextFeildCotroller.text);
               },
               child: const Text("Next Page"),
+            ),
+            TextField(
+              controller: firstTextFeildCotroller,
             )
           ],
         ),
